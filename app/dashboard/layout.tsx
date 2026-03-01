@@ -1,7 +1,7 @@
 import React from "react";
 import { DashboardSidebar } from "@/components/ui/DashboardSidebar";
 import { ProfileDropdown } from "@/components/ui/ProfileDropdown";
-import { Menu } from "lucide-react";
+import { MobileDashboardNav } from "@/components/ui/MobileDashboardNav";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 {/* Topbar Header */}
                 <header className="sticky top-0 z-10 h-16 border-b border-border-soft flex items-center justify-between px-6 bg-background/80 backdrop-blur-md shrink-0">
                     <div className="flex items-center gap-4">
-                        <Menu className="md:hidden" size={24} />
+                        <MobileDashboardNav />
                         <div className="text-sm font-medium text-muted">Workspace / Dashboard</div>
                     </div>
                     <div className="flex items-center gap-4">
