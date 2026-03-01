@@ -68,6 +68,33 @@
     background: radial-gradient(circle at center, var(--glow-writer) 0%, transparent 60%);
     @apply absolute -z-10 h-[200px] w-[200px] opacity-15 blur-2xl;
   }
+
+  /* --- PREMIUM GLASS CARD --- */
+  .premium-glass {
+    position: relative;
+    background: var(--surface-strong);
+    border: 1px solid var(--border-soft);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+      var(--shadow-inset),
+      0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.2s ease;
+  }
+
+  /* Ambient radial backlight — cosmetic only */
+  .premium-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(ellipse at 25% 0%,
+        var(--glow-dev),
+        transparent 65%);
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 /* === CUSTOM WEBKIT SCROLLBAR === */

@@ -3,9 +3,8 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
-import { HardwareCard } from "@/components/ui/HardwareCard";
 import { Spotlight } from "@/components/ui/Spotlight";
+import { ProjectArchitecture } from "@/components/illustrations/ProjectArchitecture";
 
 interface ProjectCardProps {
     title: string;
@@ -26,36 +25,31 @@ export function ProjectCard({ title, category, description, href }: ProjectCardP
             transition={{ duration: 0.5 }}
             className="h-full"
         >
-            <HardwareCard className="group hover:-translate-y-2 hover:border-accent-dev transition-all duration-300 cursor-pointer overflow-hidden flex flex-col h-full">
-                {/* Visual Placeholder (Top) */}
-                <div className="w-full aspect-video bg-surface-strong border-b border-border-soft relative overflow-hidden">
+            <div className="premium-glass group hover:-translate-y-2 hover:border-accent-dev transition-all duration-300 cursor-pointer overflow-hidden flex flex-col h-full rounded-2xl">
+                {/* Visual — Wireframe SVG replaces placeholder image */}
+                <div className="w-full aspect-video bg-surface-strong/30 border-b border-border-soft/50 relative overflow-hidden flex items-center justify-center">
                     <Spotlight size="200px" color="var(--glow-dev)" className="-translate-x-1/2 -translate-y-1/2" position={{ top: "50%", left: "50%" }} />
-                    {/* BACKEND TEAM: Replace src with actual database image URL */}
-                    <Image
-                        src="/placeholder-project.jpg"
-                        alt={title}
-                        fill
-                        className="object-cover opacity-0 transition-opacity duration-300"
-                        onLoadingComplete={(img) => img.classList.remove('opacity-0')}
-                    />
+                    <div className="relative z-10 w-4/5 h-4/5 text-foreground/10 group-hover:text-primary/30 transition-colors duration-500">
+                        <ProjectArchitecture className="w-full h-full" />
+                    </div>
                 </div>
 
                 {/* Content (Bottom) */}
                 <div className="p-6 flex flex-col grow">
-                    <span className="text-xs font-bold text-accent-dev uppercase tracking-wider mb-2">
+                    <span className="text-xs font-bold text-accent-dev uppercase tracking-widest mb-2">
                         {category}
                     </span>
-                    <h3 className="text-xl font-bold text-primary mb-3">
+                    <h3 className="text-xl font-bold text-foreground tracking-tight mb-3">
                         {title}
                     </h3>
-                    <p className="text-sm text-muted grow">
+                    <p className="text-sm text-muted leading-relaxed grow">
                         {description}
                     </p>
                     <Link href={href} className="text-sm font-medium text-primary group-hover:text-accent-dev transition-colors mt-6 w-max">
                         View Project -&gt;
                     </Link>
                 </div>
-            </HardwareCard>
+            </div>
         </motion.div>
     );
 }

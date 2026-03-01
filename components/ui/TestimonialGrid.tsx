@@ -22,10 +22,10 @@ export function TestimonialGrid() {
     ];
 
     return (
-        <section className="container mx-auto px-6 py-24">
+        <section className="container mx-auto px-6 py-32">
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Client Transmissions</h2>
-                <p className="text-muted max-w-2xl mx-auto">Feedback from the network traversing our fully deployed applications.</p>
+                <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground mb-4">Client Transmissions</h2>
+                <p className="text-base text-muted leading-relaxed max-w-2xl mx-auto">Feedback from the network traversing our fully deployed applications.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

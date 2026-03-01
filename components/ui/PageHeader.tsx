@@ -21,12 +21,12 @@ export const PageHeader = ({
                 position={{ top: '-10%', left: '50%' }}
             />
 
-            <h1 className="text-5xl md:text-7xl font-bold text-primary">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tighter text-foreground">
                 {title}
             </h1>
 
             {description && (
-                <p className="mt-6 text-lg md:text-xl text-muted max-w-2xl mx-auto">
+                <p className="mt-6 text-base md:text-lg text-muted leading-relaxed max-w-2xl mx-auto">
                     {description}
                 </p>
             )}

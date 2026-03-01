@@ -17,10 +17,10 @@ export function ContactSection() {
 
                     {/* Left Column: The Hook */}
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary tracking-tight">
+                        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground mb-6">
                             Ready to scale your digital infrastructure?
                         </h2>
-                        <p className="text-lg text-muted max-w-md">
+                        <p className="text-base text-muted leading-relaxed max-w-md">
                             Whether you need a full enterprise platform or a high-converting landing page, our engineering team is ready to build it. Reach out below.
                         </p>
                     </div>

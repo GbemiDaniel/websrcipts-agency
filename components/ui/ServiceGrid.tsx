@@ -1,56 +1,62 @@
-import React from 'react';
-import { HardwareCard } from './HardwareCard';
+"use client";
 
+import React from 'react';
+import { PremiumFeatureCard } from './PremiumFeatureCard';
+import { FrontendIllustration } from '../illustrations/FrontendIllustration';
+import { BackendIllustration } from '../illustrations/BackendIllustration';
+import { FullstackIllustration } from '../illustrations/FullstackIllustration';
+import { MobileIllustration } from '../illustrations/MobileIllustration';
+
+/**
+ * Service data with SVG illustration components as Graphic slots.
+ * Each entry maps directly to a PremiumFeatureCard.
+ */
 const SERVICES_DATA = [
     {
         title: "Frontend & UI/UX",
-        description: "Pixel-perfect React and Next.js interfaces engineered for sub-second load times.",
-        glowColor: "var(--glow-dev)", // Cyan glow
-        placeholderLabel: "Wireframes & Visuals"
+        description:
+            "Pixel-perfect React and Next.js interfaces engineered for sub-second load times.",
+        Graphic: FrontendIllustration,
     },
     {
         title: "Backend Systems",
-        description: "Robust API architectures, database management, and secure server logic.",
-        glowColor: "var(--glow-writer)", // Purple glow
-        placeholderLabel: "API & Databases"
+        description:
+            "Robust API architectures, database management, and secure server logic.",
+        Graphic: BackendIllustration,
     },
     {
         title: "Fullstack Solutions",
-        description: "End-to-end web applications bridging cutting-edge interfaces with powerful data processing.",
-        glowColor: "var(--glow-accent)", // Accent/Amber glow
-        placeholderLabel: "Full Architecture"
+        description:
+            "End-to-end web applications bridging cutting-edge interfaces with powerful data processing.",
+        Graphic: FullstackIllustration,
     },
     {
         title: "Mobile App Dev",
-        description: "High-performance native and cross-platform mobile experiences.",
-        glowColor: "var(--glow-dev)", // Cyan glow
-        placeholderLabel: "Mobile Interfaces"
-    }
+        description:
+            "High-performance native and cross-platform mobile experiences.",
+        Graphic: MobileIllustration,
+    },
 ];
 
 export function ServiceGrid() {
     return (
         <section className="container mx-auto px-6 z-10 relative max-w-6xl mt-32">
-            {/* Optional Section Title above the grid */}
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-white">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground mb-4 text-center">
                 Services we provide
             </h2>
+            <p className="text-base text-muted leading-relaxed max-w-2xl mx-auto text-center mb-12">
+                Full-spectrum engineering capabilities, from pixel-perfect interfaces to resilient backend infrastructure.
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
                 {SERVICES_DATA.map((service, index) => (
-                    <HardwareCard
+                    <PremiumFeatureCard
                         key={index}
-                        className="p-8 flex flex-col min-h-[380px] h-full"
-                        glowColor={service.glowColor}
-                    >
-                        <h3 className="text-xl font-semibold mb-3 text-primary">{service.title}</h3>
-                        <p className="text-sm text-muted mb-auto">{service.description}</p>
-
-                        {/* Visual placeholder block mimicking Pixel cards */}
-                        <div className="h-40 mt-8 rounded-lg outline-dashed outline-1 outline-white/10 flex items-center justify-center text-white/20 bg-white/5">
-                            {service.placeholderLabel}
-                        </div>
-                    </HardwareCard>
+                        title={service.title}
+                        description={service.description}
+                        Graphic={service.Graphic}
+                        className="h-full"
+                    />
                 ))}
             </div>
         </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
@@ -16,6 +16,19 @@ import { Button } from './Button';
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        // Cleanup function to ensure it is reset when unmounted
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
 
     if (pathname.includes('/dashboard') || pathname.includes('/login') || pathname.includes('/register')) {
         return null;

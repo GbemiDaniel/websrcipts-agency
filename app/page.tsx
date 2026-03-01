@@ -15,7 +15,7 @@ export default function Home() {
 
       {/* Hero / Header Spacer */}
       <div className="pt-32 pb-16 px-6 text-center z-10 relative flex flex-col items-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight mb-6 flex flex-col items-center gap-1 md:gap-3 w-full max-w-[100vw] overflow-hidden">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter mb-6 flex flex-col items-center gap-1 md:gap-3 w-full max-w-[100vw] overflow-hidden">
           <span className="text-transparent bg-clip-text bg-linear-to-b from-white via-slate-300 to-slate-600 font-extrabold drop-shadow-sm pb-2 md:pb-0">We Build</span>
           <AnimatingHeroText
             words={[
@@ -27,7 +27,7 @@ export default function Home() {
             className="text-(--accent-dev) w-full px-4"
           />
         </h1>
-        <p className="text-muted max-w-xl mx-auto text-lg">
+        <p className="text-base text-muted leading-relaxed max-w-2xl mx-auto">
           Pixel perfect implementation of premium digital experiences.
         </p>
       </div>
