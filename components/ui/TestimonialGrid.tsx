@@ -5,7 +5,7 @@ import { Quote } from "lucide-react";
 export function TestimonialGrid() {
     const TESTIMONIALS = [
         {
-            quote: "Webskit Insights transformed our fragmented UI layers into a cohesive Next.js command module. Sub-second load times have increased global retention.",
+            quote: "Webscripts Agency transformed our fragmented UI layers into a cohesive Next.js command module. Sub-second load times have increased global retention.",
             name: "Alexander Voss",
             role: "CTO, Enterprise Data",
         },

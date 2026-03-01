@@ -15,9 +15,9 @@ export function Footer() {
         <footer className="border-t border-border-soft bg-background py-12 mt-24">
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Brand Column */}
-                <div className="flex flex-col gap-2">
-                    <span className="text-xl font-bold text-primary">Webskit Insights</span>
-                    <p className="text-sm text-muted max-w-xs">
+                <div className="col-span-1 md:col-span-2">
+                    <span className="text-xl font-bold text-primary">Webscripts Agency</span>
+                    <p className="mt-4 text-sm text-muted max-w-xs">
                         Pixel-perfect React and Next.js interfaces engineered with robust full-stack architectures.
                     </p>
                 </div>
@@ -42,9 +42,9 @@ export function Footer() {
 
             {/* Copyright */}
             <div className="container mx-auto px-6 mt-16 pt-8 border-t border-border-soft/50 text-center">
-                <p className="text-xs text-muted">
-                    &copy; 2026 Webskit Insights. All rights reserved.
-                </p>
+                <div className="text-xs text-muted">
+                    &copy; 2026 Webscripts Agency. All rights reserved.
+                </div>
             </div>
         </footer>
     );

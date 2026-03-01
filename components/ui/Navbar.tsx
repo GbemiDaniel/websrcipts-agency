@@ -36,7 +36,7 @@ export function Navbar() {
 
                 {/* Left: Brand Name */}
                 <Link href="/" className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-primary transition-colors hover:text-accent-dev whitespace-nowrap" onClick={() => setIsOpen(false)}>
-                    Webskit Insights
+                    Webscripts
                 </Link>
 
                 {/* Center: Desktop Navigation Links */}

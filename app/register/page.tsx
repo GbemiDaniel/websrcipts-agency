@@ -10,9 +10,9 @@ export default function RegisterPage() {
             <HardwareCard className="max-w-md w-full p-8 relative overflow-hidden flex flex-col gap-6 z-10">
                 <Spotlight color="var(--glow-writer)" position={{ top: "-20%", right: "-10%" }} size="300px" />
 
-                <div className="relative z-10 text-center mb-4">
-                    <h1 className="text-2xl font-bold text-primary mb-2">Request Access</h1>
-                    <p className="text-sm text-muted">Register for a premium Webskit Insights client account.</p>
+                <div className="text-center mb-8">
+                    <h1 className="text-2xl font-bold text-primary mb-2">Create Account</h1>
+                    <p className="text-sm text-muted">Register for a premium Webscripts client account.</p>
                 </div>
 
                 <form className="relative z-10 flex flex-col gap-4">

@@ -3,16 +3,16 @@ import { TeamCard } from "@/components/ui/TeamCard";
 
 export default function AboutPage() {
     return (
-        <main className="relative min-h-screen overflow-hidden text-primary selection:bg-accent-dev selection:text-white pb-32">
-            <PageHeader title="About Webskit" />
-            <div className="max-w-3xl mx-auto text-center py-12 px-6 relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                    The Webskit Architecture
+        <main className="min-h-screen pt-32 pb-24">
+            <PageHeader title="About Webscripts" />
+            <section className="container mx-auto px-6 max-w-4xl prose prose-invert mt-16">
+                <h2 className="text-xl text-primary font-bold mb-4">
+                    The Webscripts Architecture
                 </h2>
                 <p className="text-lg text-muted md:text-xl">
                     We bridge the gap between premium React frontend experiences, robust backend systems, and native mobile solutions.
                 </p>
-            </div>
+            </section>
 
             <div className="container mx-auto px-6 pb-24 grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
                 <TeamCard

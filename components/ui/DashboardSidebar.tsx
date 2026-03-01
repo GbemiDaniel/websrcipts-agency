@@ -27,7 +27,7 @@ export function DashboardSidebar() {
         <aside className="hidden md:flex flex-col w-64 border-r border-border-soft bg-surface h-screen sticky top-0 shrink-0">
             <div className="h-16 flex items-center px-6 border-b border-border-soft shrink-0">
                 <Link href="/" className="text-xl font-bold text-primary hover:text-accent-dev transition-colors">
-                    Webskit Insights
+                    Webscripts
                 </Link>
             </div>
 

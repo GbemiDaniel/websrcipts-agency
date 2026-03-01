@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Webskit Insights | Full-Stack Digital Agency",
-  description: "Engineering pixel-perfect frontend interfaces, robust backend systems, and native mobile applications.",
+  title: "Webscripts Agency | Full-Stack Digital Agency",
+  description: "Webscripts Agency delivers high-end custom web applications, SaaS platforms, and enterprise solutions built on state-of-the-art architectures.",
   openGraph: {
-    title: "Webskit Insights",
+    title: "Webscripts Agency",
     description: "Full-Stack Digital Agency",
     type: "website"
   }

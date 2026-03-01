@@ -21,7 +21,7 @@ export function AboutTeaser() {
                         Engineered by specialists, driven by creativity.
                     </h2>
                     <p className="text-lg text-muted mb-10 max-w-xl">
-                        Webskit Insights isn&apos;t just an agency; it&apos;s a full-stack collective mapping visionary ideas into pristine, bug-free, highly performant code. We bridge the gap between design philosophy and raw technical execution.
+                        Webscripts Agency isn&apos;t just an agency; it&apos;s a full-stack collective mapping visionary ideas into pristine, bug-free, highly performant code. We bridge the gap between design philosophy and raw technical execution.
                     </p>
                     <Link href="/about">
                         <Button variant="outline" className="px-8 py-3 h-auto">
