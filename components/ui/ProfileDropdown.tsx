@@ -1,26 +1,49 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { User } from "lucide-react";
 
 export function ProfileDropdown() {
+    const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
     const isAdmin = pathname.includes('/admin');
+
+    // Determine dynamic routing
     const settingsHref = isAdmin ? '/dashboard/admin/settings' : '/dashboard/client/settings';
 
     return (
-        <div className="relative group cursor-pointer border border-transparent">
-            <div className="w-8 h-8 rounded-full bg-surface-strong border border-border-soft flex items-center justify-center shrink-0">
+        <div className="relative cursor-pointer">
+            {/* Avatar Trigger */}
+            <div
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-10 h-10 rounded-full bg-surface border border-border-soft flex items-center justify-center hover:bg-surface-strong transition-colors"
+                aria-label="User menu"
+            >
                 {/* Avatar placeholder */}
                 <span className="text-xs font-bold text-muted">WI</span>
             </div>
-            {/* Extended invisible hit area to prevent hover dropoff */}
-            <div className="absolute top-full right-0 w-48 h-2 bg-transparent z-40"></div>
-            <div className="absolute right-0 top-full mt-2 w-48 bg-background border border-border-soft rounded-md shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 flex flex-col py-2">
-                <Link href={settingsHref} className="px-4 py-2 text-sm text-muted hover:text-primary hover:bg-surface transition-colors">Profile Settings</Link>
-                <Link href="/login" className="px-4 py-2 text-sm text-red-400 hover:bg-surface transition-colors">Sign Out</Link>
-            </div>
+
+            {/* Dropdown Menu - Conditional Render to fix touch constraints */}
+            {isOpen && (
+                <div className="absolute right-0 top-full mt-2 w-48 bg-surface-strong border border-border-soft rounded-md shadow-2xl z-100 flex flex-col py-2">
+                    <Link
+                        href={settingsHref}
+                        onClick={() => setIsOpen(false)}
+                        className="px-4 py-2 text-sm text-muted hover:text-primary hover:bg-surface transition-colors"
+                    >
+                        Profile Settings
+                    </Link>
+                    <Link
+                        href="/login"
+                        onClick={() => setIsOpen(false)}
+                        className="px-4 py-2 text-sm text-red-400 hover:bg-surface transition-colors"
+                    >
+                        Sign Out
+                    </Link>
+                </div>
+            )}
         </div>
     );
 }
